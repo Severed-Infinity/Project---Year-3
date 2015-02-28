@@ -11,5 +11,6 @@
             }).otherwise({
                 redirectTo: '/'
             });
+            $routeProvider.html5Mode(true);
         }]);
 });
