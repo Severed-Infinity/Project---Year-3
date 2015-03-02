@@ -22,12 +22,13 @@
     <!-- endbuild -->
   </head>
   <body ng-app="reviewWebsiteApp">
+   <div ng-include="'components/navbar/navbar.html'"></div>
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div ui-view=""></div>
+    <main ui-view=""></main>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
@@ -68,8 +69,18 @@
           <script src="app/account/signup/signup.controller.js"></script>
           <script src="app/admin/admin.controller.js"></script>
           <script src="app/admin/admin.js"></script>
+          <script src="app/home/home.controller.js"></script>
+          <script src="app/home/home.js"></script>
           <script src="app/main/main.controller.js"></script>
           <script src="app/main/main.js"></script>
+          <script src="app/nintendo/nintendo.controller.js"></script>
+          <script src="app/nintendo/nintendo.js"></script>
+          <script src="app/pc/pc.controller.js"></script>
+          <script src="app/pc/pc.js"></script>
+          <script src="app/playstation/playstation.controller.js"></script>
+          <script src="app/playstation/playstation.js"></script>
+          <script src="app/xbox/xbox.controller.js"></script>
+          <script src="app/xbox/xbox.js"></script>
           <script src="components/auth/auth.service.js"></script>
           <script src="components/auth/user.service.js"></script>
           <script src="components/modal/modal.service.js"></script>

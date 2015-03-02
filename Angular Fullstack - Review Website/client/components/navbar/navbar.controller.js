@@ -1,10 +1,22 @@
 'use strict';
 
 angular.module('reviewWebsiteApp')
-  .controller('NavbarCtrl', function ($scope, $location, Auth) {
+  .controller('NavbarCtrl', function($scope, $location, Auth) {
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
+    }, {
+      'title': 'Playstation',
+      'link': '/playstation'
+    }, {
+      'title': 'Xbox',
+      'link': '/xbox'
+    }, {
+      'title': 'PC',
+      'link': '/pc'
+    }, {
+      'title': 'Nintendo',
+      'link': '/nintendo'
     }];
 
     $scope.isCollapsed = true;
