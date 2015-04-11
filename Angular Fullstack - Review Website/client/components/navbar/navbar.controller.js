@@ -2,7 +2,7 @@
 
 angular.module('reviewWebsiteApp')
     .controller('NavbarCtrl', function($scope, $location, Auth) {
-//      'use strict';
+      //      'use strict';
       $scope.menu = [{
         'title': 'Home',
         'link': '/'
