@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('gameApp')
+angular.module('reviewWebsiteApp')
   .controller('SignupCtrl', function ($scope, Auth, $location, $window) {
     $scope.user = {};
     $scope.errors = {};
