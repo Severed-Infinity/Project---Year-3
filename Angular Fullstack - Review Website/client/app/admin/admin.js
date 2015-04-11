@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('reviewWebsiteApp')
+angular.module('gameApp')
   .config(function ($stateProvider) {
     $stateProvider
       .state('admin', {

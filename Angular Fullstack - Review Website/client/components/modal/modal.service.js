@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('reviewWebsiteApp')
+angular.module('gameApp')
   .factory('Modal', function ($rootScope, $modal) {
     /**
      * Opens a modal
