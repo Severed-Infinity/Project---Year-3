@@ -36,7 +36,8 @@ angular.module('reviewWebsiteApp')
     });
 $(function() {
   $('.navbar-nav').on('click', function() {
-    if ($('.navbar-header .navbar-toggle').css('display') != 'none') {
+  'use strict';
+      if ($('.navbar-header .navbar-toggle').css('display') !== 'none') {
       $('.navbar-header .navbar-toggle').trigger('click');
     }
   });
