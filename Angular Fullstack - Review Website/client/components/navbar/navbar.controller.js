@@ -2,7 +2,6 @@
 
 angular.module('reviewWebsiteApp')
     .controller('NavbarCtrl', function($scope, $location, Auth) {
-      //      'use strict';
       $scope.menu = [{
         'title': 'Home',
         'link': '/'
@@ -36,13 +35,10 @@ angular.module('reviewWebsiteApp')
     });
 $(function() {
   $('.navbar-nav').on('click', function() {
-<<<<<<< HEAD
-  'use strict';
-      if ($('.navbar-header .navbar-toggle').css('display') !== 'none') {
-=======
     if ($('.navbar-header .navbar-toggle').css('display') !== 'none') {
->>>>>>> origin/master
-      $('.navbar-header .navbar-toggle').trigger('click');
+      if ($('.navbar-header .navbar-toggle').css('display') !== 'none') {
+        $('.navbar-header .navbar-toggle').trigger('click');
+      }
     }
   });
 });

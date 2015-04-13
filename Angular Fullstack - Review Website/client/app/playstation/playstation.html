@@ -13,7 +13,17 @@
 
   <!--TODO: create the layout-->
   <ul class="list-styling">
-    <li>
+    <li ng-repeat="review in reviews | filter: {platform: 'playstation'}">
+        <h3>{{ review.title }}</h3>
+        <span ng-repeat="genre in review.genre">{{genre}}</span><br>
+        {{ review.publisher }} <br>
+        {{ review.author }} <br>
+        {{ review.postDate }}
+        <span ng-repeat="platform in review.platform">{{platform}}</span>
+        <a ng-click="deleteReview(review)" class="trash"><span class="glyphicon glyphicon-trash pull-right"></span></a>
+    </li>
+    
+<!--
       <div layout="row" layout-align="space-between start" layout-fill href="#">
         <div flex-order="2" layout="column" layout-align="start start" flex-sm="65" flex-gt-sm="85">
           <h3>Game Title 1</h3>
@@ -92,6 +102,7 @@
         </div>
       </div>
     </li>
+-->
   </ul>
 </div>
 

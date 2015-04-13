@@ -21,6 +21,8 @@
 @import 'nintendo/nintendo.less';
 @import 'pc/pc.less';
 @import 'playstation/playstation.less';
+@import 'review/createReview/createReview.less';
+@import 'review/review/review.less';
 @import 'xbox/xbox.less';
 @import 'modal/modal.less';
 // endinjector
@@ -39,12 +41,17 @@
   min-width: 100%;
   padding: 0;
   overflow-y: scroll;
-  height: calc(~"100vh - 170px");
+  height: calc(~"100vh - 450px");
+//    min-height: 600px;
   li {
     list-style: none;
-    border-bottom: solid 1px hsla(0, 0%, 80%, 0.7);
-    padding: 25px;
-    max-height: 165px;
+    border-bottom: solid 1px hsla(0, 0%, 80%, 0.3);
+    padding: 20px;
+//    max-height: 165px;
     overflow-y: hidden;
+      &:last-child{
+        border-bottom: none;
+    }
   }
+    
 }
