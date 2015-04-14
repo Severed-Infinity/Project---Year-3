@@ -1,3 +1,27 @@
-<div class="col-md-12">
-This is the xbox view.
+<header class="hero-unit xbox-background" id="banner">
+  <div class="container">
+    <h1>Xbox Games</h1>
+    <p class="lead">Browse a list of game reviews by you for you.</p>
+    <div class="platform-logo"><img src="assets/images/xbox.png" alt="Xbox Logo"></div>
+  </div>
+</header>
+<div class="container">
+  filter: rating, date, name : ascending, descending
+
+  <!--for a given number of items from the playstation db view
+    create a quick view of the item-->
+
+  <!--TODO: create the layout-->
+  <ul class="list-styling">
+    <li ng-repeat="review in reviews | filter: {platform: 'xbox'}">
+        <h3>{{ review.title }}</h3>
+        <span ng-repeat="genre in review.genre">{{genre}}</span><br>
+        {{ review.publisher }} <br>
+        {{ review.author }} <br>
+        {{ review.postDate }}
+        <span ng-repeat="platform in review.platform">{{platform}}</span><br>
+        {{ review.description }}
+        <a ng-click="deleteReview(review)" class="trash"><span class="glyphicon glyphicon-trash pull-right"></span></a>
+    </li>
+    </ul>
 </div>

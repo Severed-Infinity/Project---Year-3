@@ -2,7 +2,8 @@
   <div class="container">
     <h1>Playstation Games</h1>
     <p class="lead">Browse a list of game reviews by you for you.</p>
-    <img src="assets/images/playstation.png" alt="Playstation Logo">
+    <div class="platform-logo"><img src="assets/images/playstation.png" alt="Playstation Logo"></div>
+    
   </div>
 </header>
 <div class="container">
@@ -19,7 +20,8 @@
         {{ review.publisher }} <br>
         {{ review.author }} <br>
         {{ review.postDate }}
-        <span ng-repeat="platform in review.platform">{{platform}}</span>
+        <span ng-repeat="platform in review.platform">{{platform}}</span><br>
+        {{ review.description }}
         <a ng-click="deleteReview(review)" class="trash"><span class="glyphicon glyphicon-trash pull-right"></span></a>
     </li>
     
