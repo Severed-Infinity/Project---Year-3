@@ -15,7 +15,18 @@
     <li class="list-group-item" ng-repeat="review in reviews">
         <strong>{{review.title}}</strong><br>
         <span class="text-muted">{{review.publisher}}</span>
-        <a ng-click="delete(review)" class="trash"><span class="glyphicon glyphicon-trash pull-right"></span></a>
+        <a ng-click="deleteReview(review)" class="trash"><span class="glyphicon glyphicon-trash pull-right"></span></a>
+    </li>
+  </ul>
+</div>
+
+<div class="container">
+  <p>The delete review and review index api routes are restricted to users with the 'admin' role.</p>
+  <ul class="list-group">
+    <li class="list-group-item" ng-repeat="thing in things">
+        <strong>{{thing.name}}</strong><br>
+        <span class="text-muted">{{thing.info}}</span>
+        <a ng-click="deleteReview(review)" class="trash"><span class="glyphicon glyphicon-trash pull-right"></span></a>
     </li>
   </ul>
 </div>

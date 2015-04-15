@@ -15,7 +15,7 @@
   <!--TODO: create the layout-->
   <ul class="list-styling">
     <li ng-repeat="review in reviews | filter: {platform: 'playstation'}">
-        <h3>{{ review.title }}</h3>
+        <a ng-href="/api/reviews/{{reviews._id}}"><h3>{{ review.title }}</h3></a>
         <span ng-repeat="genre in review.genre">{{genre}}</span><br>
         {{ review.publisher }} <br>
         {{ review.author }} <br>
