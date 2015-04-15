@@ -1,1 +1,0 @@
-angular.module('reviewApp', ['ngRoute']);
