@@ -2,8 +2,8 @@
   <div class="container">
     <h1>Playstation Games</h1>
     <p class="lead">Browse a list of game reviews by you for you.</p>
-    <div class="platform-logo"><img src="assets/images/playstation.png" alt="Playstation Logo"></div>
-    
+    <div class=""><img src="assets/images/playstation.png" alt="Playstation Logo"></div>
+
   </div>
 </header>
 <div class="container">
@@ -15,96 +15,16 @@
   <!--TODO: create the layout-->
   <ul class="list-styling">
     <li ng-repeat="review in reviews | filter: {platform: 'playstation'}">
-        <a ng-href="/api/reviews/{{reviews._id}}"><h3>{{ review.title }}</h3></a>
+<!--        <a ng-href="/game/{{review._id}}/about"><h3>{{ review.title }}</h3></a>-->
+        <a ui-sref="game.about({id: review._id })"><h3>{{ review.title }}</h3></a>
         <span ng-repeat="genre in review.genre">{{genre}}</span><br>
         {{ review.publisher }} <br>
         {{ review.author }} <br>
         {{ review.postDate }}
-        <span ng-repeat="platform in review.platform">{{platform}}</span><br>
+        <span ng-repeat="platform in review.platform">{{ platform }}</span><br>
         {{ review.description }}
-        <a ng-click="deleteReview(review)" class="trash"><span class="glyphicon glyphicon-trash pull-right"></span></a>
-    </li>
-    
-<!--
-      <div layout="row" layout-align="space-between start" layout-fill href="#">
-        <div flex-order="2" layout="column" layout-align="start start" flex-sm="65" flex-gt-sm="85">
-          <h3>Game Title 1</h3>
-          <span>by Publisher Name</span>
-          <span><time>postdate</time> &bull; rating</span>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis fuga, perspiciatis ipsum dolore! Odio vero dignissimos omnis aperiam? Possimus, laborum, necessitatibus. Magni voluptatibus assumenda ut ipsam accusamus aperiam cum odit.</p>
-        </div>
-        <div flex-order="1" flex flex-sm="33">
-          <img alt="game cover" class="minigamecover" src="../../assets/images/yeoman.png">
-        </div>
-      </div>
     </li>
 
-    <li>
-      <div layout="row" layout-align="start start" href="#">
-        <div flex-order="2" layout="column" layout-align="start start" flex="65">
-          <h3>Game Title 2</h3>
-          <span>by Publisher Name</span>
-          <span><time>postdate</time> &bull; rating</span>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia corporis nisi deserunt unde eveniet sint pariatur illo, beatae, odit delectus ipsum harum veniam quis expedita, odio sapiente distinctio sunt fuga!</p>
-        </div>
-        <div flex-order="1" flex>
-          <img alt="game cover" class="minigamecover" src="../../assets/images/yeoman.png">
-        </div>
-      </div>
-    </li>
-    <li>
-      <div layout="row" layout-align="start start" href="#">
-        <div flex-order="2" layout="column" layout-align="start start" flex="65">
-          <h3>Game Title 3</h3>
-          <span>by Publisher Name</span>
-          <span><time>postdate</time> &bull; rating</span>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum sapiente laudantium, voluptatibus sed, laborum aspernatur necessitatibus obcaecati quod quisquam esse libero ab eius reiciendis labore impedit, sunt. Voluptates, voluptatum magni.</p>
-        </div>
-        <div flex-order="1" flex>
-          <img alt="game cover" class="minigamecover" src="../../assets/images/yeoman.png">
-        </div>
-      </div>
-    </li>
-    <li>
-      <div layout="row" layout-align="start start" href="#">
-        <div flex-order="2" layout="column" layout-align="start start" flex="65">
-          <h3>Game Title 4</h3>
-          <span>by Publisher Name</span>
-          <span><time>postdate</time> &bull; rating</span>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum suscipit, natus? Unde iste quo vel cum inventore suscipit error, est mollitia nemo sequi, doloremque temporibus. Exercitationem maxime nulla, soluta nihil.</p>
-        </div>
-        <div flex-order="1" flex>
-          <img alt="game cover" class="minigamecover" src="../../assets/images/yeoman.png">
-        </div>
-      </div>
-    </li>
-    <li>
-      <div layout="row" layout-align="start start" href="#">
-        <div flex-order="2" layout="column" layout-align="start start" flex="65">
-          <h3>Game Title 5</h3>
-          <span>by Publisher Name</span>
-          <span><time>postdate</time> &bull; rating</span>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum amet repellat quos rem delectus a fuga inventore eos optio facilis nulla eius blanditiis iusto, doloribus, alias dolores perspiciatis? Minus, at!</p>
-        </div>
-        <div flex-order="1" flex>
-          <img alt="game cover" class="minigamecover" src="../../assets/images/yeoman.png">
-        </div>
-      </div>
-    </li>
-    <li>
-      <div layout="row" layout-align="start start" href="#">
-        <div flex-order="2" layout="column" layout-align="start start" flex="65">
-          <h3>Game Title 6</h3>
-          <span>by Publisher Name</span>
-          <span><time>postdate</time> &bull; rating</span>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus blanditiis enim quidem eum, eius tempore non expedita ipsam incidunt quasi dolorum magni, veniam, ratione saepe officia modi perferendis sapiente neque!</p>
-        </div>
-        <div flex-order="1" flex>
-          <img alt="game cover" class="minigamecover" src="../../assets/images/yeoman.png">
-        </div>
-      </div>
-    </li>
--->
   </ul>
 </div>
 

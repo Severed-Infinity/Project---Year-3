@@ -22,6 +22,11 @@ angular.module('reviewWebsiteApp')
         socket.syncUpdates('review', $scope.reviews);
       });
 
+      //      $http.get('/api/reviews/:_id').success(function(review) {
+      //        $scope.review = review;
+      //        socket.syncUpdates('review', $scope.reviews);
+      //      });
+
       $scope.deleteReview = function(review) {
         $http.delete('/api/reviews/' + review._id);
       };

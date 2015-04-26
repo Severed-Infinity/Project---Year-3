@@ -1,31 +1,20 @@
-<div class="container">
+<div class="container" ng-controller="AdminCtrl">
   <p>The delete user and user index api routes are restricted to users with the 'admin' role.</p>
   <ul class="list-group">
     <li class="list-group-item" ng-repeat="user in users">
         <strong>{{user.name}}</strong><br>
         <span class="text-muted">{{user.email}}</span>
-        <a ng-click="delete(user)" class="trash"><span class="glyphicon glyphicon-trash pull-right"></span></a>
+        <a ng-click="deleteUser(user)" class="trash"><span class="glyphicon glyphicon-trash pull-right"></span></a>
     </li>
   </ul>
 </div>
 
-<div class="container">
+<div class="container" ng-controller="AdminCtrl2">
   <p>The delete review and review index api routes are restricted to users with the 'admin' role.</p>
   <ul class="list-group">
     <li class="list-group-item" ng-repeat="review in reviews">
         <strong>{{review.title}}</strong><br>
         <span class="text-muted">{{review.publisher}}</span>
-        <a ng-click="deleteReview(review)" class="trash"><span class="glyphicon glyphicon-trash pull-right"></span></a>
-    </li>
-  </ul>
-</div>
-
-<div class="container">
-  <p>The delete review and review index api routes are restricted to users with the 'admin' role.</p>
-  <ul class="list-group">
-    <li class="list-group-item" ng-repeat="thing in things">
-        <strong>{{thing.name}}</strong><br>
-        <span class="text-muted">{{thing.info}}</span>
         <a ng-click="deleteReview(review)" class="trash"><span class="glyphicon glyphicon-trash pull-right"></span></a>
     </li>
   </ul>

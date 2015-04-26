@@ -1,0 +1,15 @@
+
+  <md-toolbar>
+     <div class="container" layout="row" layout-padding layout-align="space-between end">
+      <h1 flex="75">{{review.title}}</h1>
+      <nav flex="25" layout="row" layout-align="space-around start">
+        <md-button class="md-raised" ui-sref="game.about" ui-sref-active="md-primary">about</md-button>
+        <md-button class="md-raised" ui-sref="game.comments" ui-sref-active="md-primary">comments</md-button>
+        <md-button class="md-raised" ui-sref="game.photos" ui-sref-active="md-primary">photos</md-button>
+      </nav>
+      </div>
+  </md-toolbar>
+  <hr>
+  
+  <div ui-view="">{{review}}</div>
+

@@ -1,0 +1,14 @@
+<div layout="row" layout-margin layout-align="space-between start">
+    <img src="#" alt="game cover" flex="50">
+    <div flex="50" layout="column">
+       <h2>About {{review.title}}</h2>
+        <strong>Info</strong>
+        <span>Genre: <span ng-repeat="genre in review.genre">{{genre}}</span></span>
+        <span>Publisher: {{review.publisher}}</span>
+        <span>Author: {{review.author}}</span>
+        <span>Date: {{review.date}}</span>
+        <span>Platform: <span ng-repeat="platform in review.platform">{{platform}}</span></span>
+        <strong>Description</strong>
+        <span>{{review.description}}</span>
+    </div>
+</div>

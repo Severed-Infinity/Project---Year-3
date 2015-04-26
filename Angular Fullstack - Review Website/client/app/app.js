@@ -6,11 +6,12 @@ angular.module('reviewWebsiteApp', [
   'ngSanitize',
   'btford.socket-io',
   'ui.router',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'ngMaterial'
 ])
     .config(function($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
       $urlRouterProvider
-            .otherwise('/');
+        .otherwise('/');
 
       $locationProvider.html5Mode(true);
       $httpProvider.interceptors.push('authInterceptor');

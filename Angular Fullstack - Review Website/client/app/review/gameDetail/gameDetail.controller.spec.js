@@ -1,21 +1,21 @@
 'use strict';
 
-describe('Controller: ReviewCtrl', function () {
+describe('Controller: GameDetailCtrl', function() {
 
   // load the controller's module
   beforeEach(module('reviewWebsiteApp'));
 
-  var ReviewCtrl, scope;
+  var GameDetailCtrl, scope;
 
   // Initialize the controller and a mock scope
-  beforeEach(inject(function ($controller, $rootScope) {
+  beforeEach(inject(function($controller, $rootScope) {
     scope = $rootScope.$new();
-    ReviewCtrl = $controller('ReviewCtrl', {
+    ReviewCtrl = $controller('GameDetailCtrl', {
       $scope: scope
     });
   }));
 
-  it('should ...', function () {
+  it('should ...', function() {
     expect(1).toEqual(1);
   });
 });
